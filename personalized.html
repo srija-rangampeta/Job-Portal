@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personalized Jobs</title>
+  <link rel="stylesheet" href="personalized.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="personalized.html">Personalized Jobs</a>
+          <a href="contact.html">Contact</a>
+          <a href="recruiter.html">Recruiter</a>
+        </nav>
+        
+    </nav>
+
+  <main class="container mt-5">
+    <h2 class="text-center mb-4">Find Your Dream Job</h2>
+
+    <form id="filterForm" class="row g-3 mb-4">
+      <div class="col-md-5">
+        <label for="filterLocation" class="form-label">Location</label>
+        <input type="text" class="form-control" id="filterLocation" placeholder="Enter Location" />
+      </div>
+      <div class="col-md-5">
+        <label for="filterType" class="form-label">Job Type</label>
+        <select class="form-select" id="filterType">
+          <option value="">All</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Internship">Internship</option>
+        </select>
+      </div>
+      <div class="col-md-2 d-flex align-items-end">
+        <button type="submit" class="btn btn-success w-100">Filter</button>
+      </div>
+    </form>
+       <div id="jobList"></div>
+  </main>
+  <div id="application-form" class="custom-modal hide">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeApplicationForm()">×</span>
+      <h4 id="job-role">Apply for Job</h4>
+      <form onsubmit="submitApplication(event)">
+        <input type="text" id="applicant-name" placeholder="Your Name" required />
+        <input type="email" id="applicant-email" placeholder="Your Email" required />
+        <textarea id="applicant-message" rows="4" placeholder="Why are you a good fit?" required></textarea>
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </div>
+  
+  
+  
+  <script src="personalized.js"></script>
+</body>
+</html>
