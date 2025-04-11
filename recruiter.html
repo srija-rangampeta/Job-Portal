@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recruiter Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+      <!-- Navbar -->
+      <nav class="navbar">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="personalized.html">Personalized Jobs</a>
+            <a href="contact.html">Contact</a>
+            <a href="recruiter.html">Recruiter</a>
+          </nav>
+          
+      </nav>
+  <div class="recruiter-container">
+    <h2>Post a Job</h2>
+    <form class="recruiter-form" id="jobForm">
+      <input type="text" id="jobTitle" placeholder="Job Title" required />
+      <textarea id="jobDesc" rows="4" placeholder="Job Description" required></textarea>
+      <input type="text" id="location" placeholder="Location" required />
+      <input type="text" id="Company" placeholder="Company" required />
+      <select id="jobType" required>
+        <option value="">Select Job Type</option>
+        <option value="Full-time">Full-time</option>
+        <option value="Part-time">Part-time</option>
+        <option value="Internship">Internship</option>
+      </select>
+      <button type="submit">Post Job</button>
+    </form>
+  </div>
+
+  <script src="recruiter.js"></script>
+</body>
+</html>
